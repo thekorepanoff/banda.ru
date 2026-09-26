@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>BANDA.RU — стильная контора</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#121212;color:#F1E3C4;font-family:'Jost',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#D9B26F;text-decoration:none}a:hover{color:#F1E3C4}
+input,textarea,button{font-family:inherit}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:50;background:rgba(18,18,18,.92);backdrop-filter:blur(8px);border-bottom:1px solid #2c2a27">
+  <div style="max-width:1320px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+    <a href="#top" style="display:flex;align-items:center;gap:12px;color:#F1E3C4">
+      <img src="assets/lion.png" alt="" style="height:34px;width:auto;filter:invert(.92)">
+      <span style="font-weight:500;font-size:18px;letter-spacing:.42em;color:#F1E3C4">BANDA.RU</span>
+    </a>
+    <nav style="display:flex;gap:28px;flex-wrap:wrap;font-size:15px;font-weight:500;letter-spacing:.04em">
+      <a href="#new" style="color:#F1E3C4" style-hover="color:#D9B26F">Новинки</a>
+      <a href="#catalog" style="color:#F1E3C4" style-hover="color:#D9B26F">Каталог</a>
+      <a href="#about" style="color:#F1E3C4" style-hover="color:#D9B26F">Шоурум</a>
+      <a href="#reviews" style="color:#F1E3C4" style-hover="color:#D9B26F">Отзывы</a>
+      <a href="#contacts" style="color:#F1E3C4" style-hover="color:#D9B26F">Контакты</a>
+    </nav>
+    <a href="{{ tgUrl }}" target="_blank" style="background:#F1E3C4;color:#121212;padding:10px 18px;font-size:14px;font-weight:500;letter-spacing:.06em" style-hover="background:#A3201B;color:#F1E3C4">Написать в Telegram</a>
+  </div>
+</header>
+
+<section id="top" data-screen-label="Hero" style="position:relative;overflow:hidden;background:#121212">
+  <div style="position:absolute;inset:0;background:#141A2E url(assets/carpet.jpg) center/cover no-repeat;clip-path:polygon(0 0,100% 0,100% 220px,0 380px)"></div>
+  <div style="position:relative;max-width:1320px;margin:0 auto;padding:410px 24px 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:48px;align-items:end">
+    <div style="display:flex;align-items:center;gap:clamp(20px,3vw,36px)">
+      <img src="assets/lion.png" alt="BANDA" style="height:clamp(96px,11vw,168px);width:auto;filter:invert(.92)">
+      <div><div style="font-size:clamp(34px,5.2vw,72px);font-weight:500;letter-spacing:.42em;line-height:1;color:#F1E3C4">BANDA.RU</div>
+      <div style="margin-top:14px;font-size:clamp(18px,2.1vw,30px);letter-spacing:.1em;color:#D9B26F">стильная контора</div></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:28px"><p style="margin:0;max-width:520px;font-size:19px;line-height:1.55;color:#b8ad98;text-wrap:pretty">Шоурум уличной одежды в Кургане. Мужское, женское и то, что носят все. Приходи мерить — чай нальём, размер подберём, в зеркало посмотрим вместе.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="#catalog" style="background:#A3201B;color:#F1E3C4;padding:16px 28px;font-size:16px;font-weight:500;letter-spacing:.06em" style-hover="background:#F1E3C4;color:#121212">Смотреть каталог</a>
+      <a href="#contacts" style="border:1.5px solid #F1E3C4;color:#F1E3C4;padding:14.5px 28px;font-size:16px;font-weight:500;letter-spacing:.06em" style-hover="background:#F1E3C4;color:#121212">Ленина, 48 →</a>
+    </div></div>
+  </div>
+</section>
+
+<div style="background:#141A2E;color:#F1E3C4;border-top:6px double #D9B26F;border-bottom:6px double #D9B26F;overflow:hidden;white-space:nowrap">
+  {{ marquee }}
+</div>
+
+<section id="assort" data-screen-label="Ассортимент" style="max-width:1320px;margin:0 auto;padding:96px 24px 16px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:36px">
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.14em;color:#D9503F;text-transform:uppercase">Ассортимент</div>
+      <h2 style="margin:10px 0 0;font-size:clamp(36px,5vw,64px);font-weight:600;line-height:1;letter-spacing:-.01em">Что носит банда</h2>
+    </div>
+    <p style="margin:0;max-width:380px;font-size:17px;line-height:1.5;color:#b8ad98">Выбирай отдел — покажем, что сейчас висит на рейле.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px">
+    <sc-for list="{{ catTiles }}" as="t" hint-placeholder-count="5">
+      <article style="display:flex;flex-direction:column;gap:14px">
+        <div style="aspect-ratio:3/4;padding:7px;background:#A3201B;border:3px solid #141A2E;box-shadow:inset 0 0 0 2px #D9B26F">
+          <image-slot id="{{ t.slot }}" shape="rect" placeholder="{{ t.ph }}"></image-slot>
+        </div>
+        <button onClick="{{ t.pick }}" style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;background:none;border:none;border-bottom:1px solid #2c2a27;padding:0 0 12px;color:#F1E3C4;cursor:pointer;text-align:left" style-hover="color:#D9B26F;border-bottom-color:#D9B26F">
+          <span style="font-size:20px;font-weight:500">{{ t.label }}</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:13px;white-space:nowrap">{{ t.n }} →</span>
+        </button>
+      </article>
+    </sc-for>
+  </div>
+</section>
+<section id="new" data-screen-label="Новинки" style="max-width:1320px;margin:0 auto;padding:96px 24px 40px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:36px">
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.14em;color:#D9503F;text-transform:uppercase">01 / Свежий завоз</div>
+      <h2 style="margin:10px 0 0;font-size:clamp(36px,5vw,64px);font-weight:600;line-height:1;letter-spacing:-.01em">Новинки</h2>
+    </div>
+    <p style="margin:0;max-width:380px;font-size:17px;line-height:1.5;color:#b8ad98">Разбирают быстро. Увидел — пиши, отложим на сутки.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px">
+    <sc-for list="{{ newItems }}" as="item" hint-placeholder-count="4">
+      <article style="display:flex;flex-direction:column;gap:14px;cursor:pointer" onClick="{{ item.open }}">
+        <div style="position:relative;aspect-ratio:3/4;padding:8px;background:#A3201B;border:3px solid #141A2E;box-shadow:inset 0 0 0 2px #D9B26F">
+          <image-slot id="{{ item.slot }}" shape="rect" placeholder="{{ item.ph }}"></image-slot>
+          <div style="position:absolute;top:18px;left:18px;background:#F1E3C4;color:#141A2E;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.1em;padding:5px 9px;pointer-events:none">NEW</div>
+        </div>
+        <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline">
+          <div style="font-size:18px;font-weight:500">{{ item.name }}</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:15px;white-space:nowrap">{{ item.price }}</div>
+        </div>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<section id="catalog" data-screen-label="Каталог" style="max-width:1320px;margin:0 auto;padding:80px 24px 96px">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.14em;color:#D9503F;text-transform:uppercase">02 / Весь шмот</div>
+  <h2 style="margin:10px 0 28px;font-size:clamp(36px,5vw,64px);font-weight:600;line-height:1;letter-spacing:-.01em">Каталог</h2>
+  <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid #F1E3C4;border-bottom:1px solid #F1E3C4;padding:16px 0;margin-bottom:32px">
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <sc-for list="{{ cats }}" as="c" hint-placeholder-count="6">
+        <button onClick="{{ c.pick }}" style="border:1.5px solid #F1E3C4;background:{{ c.bg }};color:{{ c.fg }};padding:8px 16px;font-size:15px;font-weight:500;cursor:pointer">{{ c.label }}</button>
+      </sc-for>
+    </div>
+    <div style="display:flex;gap:0;border:1.5px solid #F1E3C4">
+      <sc-for list="{{ genders }}" as="g" hint-placeholder-count="3">
+        <button onClick="{{ g.pick }}" style="border:none;background:{{ g.bg }};color:{{ g.fg }};padding:8px 16px;font-size:15px;font-weight:500;cursor:pointer">{{ g.label }}</button>
+      </sc-for>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:32px 20px">
+    <sc-for list="{{ filtered }}" as="item" hint-placeholder-count="8">
+      <article style="display:flex;flex-direction:column;gap:10px;cursor:pointer" onClick="{{ item.open }}">
+        <div style="aspect-ratio:4/5;background:#1d1b19">
+          <image-slot id="{{ item.slot }}" shape="rect" placeholder="{{ item.ph }}"></image-slot>
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.1em;color:#9a8f7c;text-transform:uppercase">{{ item.cat }} · {{ item.gender }}</div>
+        <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline">
+          <div style="font-size:17px;font-weight:500">{{ item.name }}</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:14px;white-space:nowrap">{{ item.price }}</div>
+        </div>
+      </article>
+    </sc-for>
+  </div>
+  <sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}">
+    <p style="font-size:18px;color:#b8ad98">Тут пока пусто. Напиши нам — привезём.</p>
+  </sc-if>
+</section>
+
+<section id="about" data-screen-label="О шоуруме" style="background:#141A2E;color:#F1E3C4">
+  <div style="max-width:1320px;margin:0 auto;padding:96px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:56px;align-items:center">
+    <div style="padding:14px;background:#A3201B;border:4px solid #D9B26F;box-shadow:0 0 0 8px #141A2E,0 0 0 10px #D9B26F">
+      <div style="aspect-ratio:4/3">
+        <image-slot id="showroom-photo" shape="rect" placeholder="фото шоурума"></image-slot>
+      </div>
+    </div>
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.14em;color:#D9B26F;text-transform:uppercase">03 / Контора</div>
+      <h2 style="margin:10px 0 24px;font-size:clamp(36px,5vw,64px);font-weight:600;line-height:1.02;letter-spacing:-.01em;color:#FAF8F4">Не магазин.<br>Шоурум.</h2>
+      <p style="margin:0 0 18px;font-size:19px;line-height:1.55;text-wrap:pretty">Мы не вешаем сто одинаковых футболок. Каждую вещь выбираем сами и держим в паре размеров — поэтому у тебя её не будет у половины города.</p>
+      <p style="margin:0 0 32px;font-size:19px;line-height:1.55;text-wrap:pretty">Ковёр на стене — по делу. Здесь уютно, как у бабушки, только одеваем лучше.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:#D9B26F;border:1px solid #D9B26F">
+        <div style="background:#141A2E;padding:18px"><div style="font-size:15px;color:#D9B26F;margin-bottom:6px">Примерка</div><div style="font-size:17px">Сколько угодно</div></div>
+        <div style="background:#141A2E;padding:18px"><div style="font-size:15px;color:#D9B26F;margin-bottom:6px">Бронь</div><div style="font-size:17px">Отложим на сутки</div></div>
+        <div style="background:#141A2E;padding:18px"><div style="font-size:15px;color:#D9B26F;margin-bottom:6px">Заказ</div><div style="font-size:17px">Через Telegram</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<sc-if value="{{ showReviews }}" hint-placeholder-val="{{ true }}">
+<section id="reviews" data-screen-label="Отзывы" style="max-width:1320px;margin:0 auto;padding:96px 24px">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.14em;color:#D9503F;text-transform:uppercase">04 / Что говорят</div>
+  <h2 style="margin:10px 0 36px;font-size:clamp(36px,5vw,64px);font-weight:600;line-height:1;letter-spacing:-.01em">Отзывы банды</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px">
+    <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+      <figure style="margin:0;padding:28px;border:1.5px solid #F1E3C4;display:flex;flex-direction:column;gap:20px;justify-content:space-between;background:#121212">
+        <blockquote style="margin:0;font-size:20px;line-height:1.45;text-wrap:pretty">«{{ r.text }}»</blockquote>
+        <figcaption style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.06em;color:#9a8f7c"><span>{{ r.name }}</span><span>{{ r.src }}</span></figcaption>
+      </figure>
+    </sc-for>
+  </div>
+</section>
+</sc-if>
+
+<section id="contacts" data-screen-label="Контакты" style="position:relative;background:#141A2E url(assets/carpet.jpg) center/cover;padding:96px 24px">
+  <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:0;background:#121212;border:4px solid #141A2E;box-shadow:0 0 0 3px #D9B26F">
+    <div style="padding:44px;display:flex;flex-direction:column;gap:28px">
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.14em;color:#D9503F;text-transform:uppercase">05 / Где нас найти</div>
+        <h2 style="margin:10px 0 0;font-size:clamp(34px,4.4vw,56px);font-weight:600;line-height:1;letter-spacing:-.01em">Курган,<br>Ленина, 48</h2>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="{{ tgUrl }}" target="_blank" style="background:#F1E3C4;color:#121212;padding:12px 18px;font-weight:500" style-hover="background:#A3201B;color:#F1E3C4">Telegram</a>
+        <a href="{{ igUrl }}" target="_blank" style="border:1.5px solid #F1E3C4;color:#F1E3C4;padding:10.5px 18px;font-weight:500" style-hover="background:#F1E3C4;color:#121212">Instagram</a>
+        <a href="https://vk.ru/banda.shop45" target="_blank" style="border:1.5px solid #F1E3C4;color:#F1E3C4;padding:10.5px 18px;font-weight:500" style-hover="background:#F1E3C4;color:#121212">ВКонтакте</a>
+      </div>
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:12px;border-top:1px solid #F1E3C4;padding-top:24px">
+          <div style="font-size:20px;font-weight:500">Или оставь заявку — ответим сами</div>
+          <input required="" name="name" placeholder="Как тебя зовут" style="border:1.5px solid #F1E3C4;background:transparent;padding:14px;font-size:16px;outline:none" style-focus="border-color:#A3201B">
+          <input required="" name="contact" placeholder="Телефон или @telegram" style="border:1.5px solid #F1E3C4;background:transparent;padding:14px;font-size:16px;outline:none" style-focus="border-color:#A3201B">
+          <textarea name="msg" rows="3" placeholder="Что ищешь? Размер, вещь, настроение" style="border:1.5px solid #F1E3C4;background:transparent;padding:14px;font-size:16px;outline:none;resize:vertical" style-focus="border-color:#A3201B"></textarea>
+          <button type="submit" style="background:#A3201B;color:#F1E3C4;border:none;padding:16px;font-size:16px;font-weight:500;letter-spacing:.06em;cursor:pointer" style-hover="background:#F1E3C4;color:#121212">Отправить</button>
+        </form>
+      </sc-if>
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <div style="border-top:1px solid #F1E3C4;padding-top:24px;font-size:22px;line-height:1.4">Принято. Контора уже в курсе — скоро напишем.</div>
+      </sc-if>
+    </div>
+    <div style="min-height:420px;border-left:4px solid #141A2E">
+      <iframe src="https://yandex.ru/map-widget/v1/?text=%D0%9A%D1%83%D1%80%D0%B3%D0%B0%D0%BD%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%B0%2C%2048&amp;z=16" title="Карта" style="width:100%;height:100%;min-height:420px;border:0;display:block;filter:grayscale(.3)"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#121212;color:#F1E3C4">
+  <div style="max-width:1320px;margin:0 auto;padding:36px 24px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap">
+    <div style="display:flex;align-items:center;gap:14px">
+      <img src="assets/lion.png" alt="" style="height:40px;filter:invert(.92)">
+      <div><div style="letter-spacing:.42em;font-weight:500">BANDA.RU</div><div style="font-size:14px;letter-spacing:.1em;color:#D9B26F">стильная контора</div></div>
+    </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#b8ad98">Курган · Ленина, 48</div>
+  </div>
+</footer>
+
+<sc-if value="{{ hasOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ close }}" style="position:fixed;inset:0;z-index:100;background:rgba(20,26,46,.82);display:flex;align-items:center;justify-content:center;padding:24px">
+    <div onClick="{{ stop }}" style="background:#121212;max-width:920px;width:100%;max-height:92vh;overflow:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));border:4px solid #141A2E;box-shadow:0 0 0 3px #D9B26F">
+      <div style="aspect-ratio:3/4;background:#1d1b19">
+        <image-slot id="{{ open.slot }}" shape="rect" placeholder="{{ open.ph }}"></image-slot>
+      </div>
+      <div style="padding:36px;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;justify-content:space-between;gap:12px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.1em;color:#9a8f7c;text-transform:uppercase">{{ open.cat }} · {{ open.gender }}</div>
+          <button onClick="{{ close }}" style="border:none;background:none;font-size:22px;cursor:pointer;line-height:1">✕</button>
+        </div>
+        <h3 style="margin:0;font-size:36px;font-weight:600;line-height:1.05">{{ open.name }}</h3>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:20px">{{ open.price }}</div>
+        <div>
+          <div style="font-size:15px;color:#9a8f7c;margin-bottom:8px">Размеры в наличии</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <sc-for list="{{ open.sizes }}" as="s" hint-placeholder-count="3">
+              <span style="border:1.5px solid #F1E3C4;padding:6px 12px;font-family:'JetBrains Mono',monospace;font-size:14px">{{ s }}</span>
+            </sc-for>
+          </div>
+        </div>
+        <p style="margin:0;font-size:16px;line-height:1.5;color:#b8ad98">Напиши — пришлём живые фото, замеры и отложим на сутки.</p>
+        <a href="{{ open.tg }}" target="_blank" style="margin-top:auto;background:#A3201B;color:#F1E3C4;padding:16px;text-align:center;font-weight:500;letter-spacing:.06em" style-hover="background:#F1E3C4;color:#121212">Хочу — написать в Telegram</a>
+      </div>
+    </div>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;tgHandle&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;banda_shop45&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Контакты&quot;},&quot;igUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://instagram.com/&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Контакты&quot;},&quot;showReviews&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Разделы&quot;}}">
+class Component extends DCLogic {
+  state = { cat: 'Все', gender: 'Все', openId: null, sent: false };
+  items = [
+    { id: 1, name: 'Худи оверсайз «Контора»', cat: 'Худи', gender: 'Унисекс', price: '5 900 ₽', isNew: true, sizes: ['M', 'L', 'XL'] },
+    { id: 2, name: 'Лонгслив с принтом', cat: 'Футболки', gender: 'Унисекс', price: '3 200 ₽', isNew: true, sizes: ['S', 'M', 'L'] },
+    { id: 3, name: 'Карго на резинке', cat: 'Штаны', gender: 'Мужское', price: '4 800 ₽', isNew: true, sizes: ['30', '32', '34'] },
+    { id: 4, name: 'Бомбер укороченный', cat: 'Верхняя одежда', gender: 'Женское', price: '7 900 ₽', isNew: true, sizes: ['XS', 'S', 'M'] },
+    { id: 5, name: 'Футболка boxy', cat: 'Футболки', gender: 'Мужское', price: '2 400 ₽', sizes: ['M', 'L', 'XL'] },
+    { id: 6, name: 'Зип-худи', cat: 'Худи', gender: 'Женское', price: '5 400 ₽', sizes: ['S', 'M'] },
+    { id: 7, name: 'Джинсы широкие', cat: 'Штаны', gender: 'Женское', price: '5 200 ₽', sizes: ['26', '28', '30'] },
+    { id: 8, name: 'Пуховик короткий', cat: 'Верхняя одежда', gender: 'Мужское', price: '12 900 ₽', sizes: ['L', 'XL'] },
+    { id: 9, name: 'Бини вязаная', cat: 'Аксессуары', gender: 'Унисекс', price: '1 500 ₽', sizes: ['One size'] },
+    { id: 10, name: 'Сумка через плечо', cat: 'Аксессуары', gender: 'Унисекс', price: '2 900 ₽', sizes: ['One size'] },
+    { id: 11, name: 'Свитшот базовый', cat: 'Худи', gender: 'Мужское', price: '4 200 ₽', sizes: ['M', 'L', 'XL', 'XXL'] },
+    { id: 12, name: 'Топ в рубчик', cat: 'Футболки', gender: 'Женское', price: '1 900 ₽', sizes: ['XS', 'S', 'M'] },
+  ];
+  reviews = [
+    { text: 'Зашла за футболкой, ушла с тремя пакетами и новым любимым худи. Спасибо, что остановили на трёх.', name: 'Алина', src: 'ВК' },
+    { text: 'Подобрали размер по фото в телеге, приехал — село идеально. Ковёр, кстати, огонь.', name: 'Дима', src: 'Telegram' },
+    { text: 'Единственное место в Кургане, где не стыдно сказать «где брал?» и не соврать.', name: 'Макс', src: 'ВК' },
+  ];
+  tg() { const h = (this.props.tgHandle ?? 'banda_shop45').replace('@', ''); return 'https://t.me/' + h; }
+  decorate(it) {
+    return { ...it, slot: 'prod-' + it.id, ph: 'фото: ' + it.name.toLowerCase(),
+      open: () => this.setState({ openId: it.id }),
+      tg: this.tg() + '?text=' + encodeURIComponent('Привет! Хочу «' + it.name + '» (' + it.price + '). Есть мой размер?') };
+  }
+  chip(label, active, pick) {
+    return { label, pick, bg: active ? '#F1E3C4' : 'transparent', fg: active ? '#121212' : '#F1E3C4' };
+  }
+  catTiles() {
+    const cs = ['Худи', 'Футболки', 'Штаны', 'Верхняя одежда', 'Аксессуары'];
+    return cs.map((c, k) => { const n = this.items.filter(i => i.cat === c).length;
+      return { label: c, n: n + ' ' + (n === 1 ? 'вещь' : n < 5 ? 'вещи' : 'вещей'), slot: 'cat-' + (k + 1), ph: 'фото: ' + c.toLowerCase(), num: '0' + (k + 1),
+        pick: () => { this.setState({ cat: c, gender: 'Все' }); const el = document.getElementById('catalog'); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' }); } }; });
+  }
+  renderVals() {
+    const { cat, gender, openId, sent } = this.state;
+    const all = this.items.map(i => this.decorate(i));
+    const filtered = all.filter(i => (cat === 'Все' || i.cat === cat) && (gender === 'Все' || i.gender === gender || i.gender === 'Унисекс'));
+    const open = all.find(i => i.id === openId);
+    const words = ['СТИЛЬНАЯ КОНТОРА', 'КУРГАН · ЛЕНИНА 48', 'STREETWEAR', 'МУЖСКОЕ · ЖЕНСКОЕ', 'ПРИМЕРКА БЕЗ СТЕСНЕНИЯ'];
+    const run = words.concat(words).map((w, k) => React.createElement('span', { key: k, style: { padding: '0 28px' } }, w, React.createElement('span', { style: { color: '#A3201B', marginLeft: 56 } }, '◆')));
+    const marquee = React.createElement('div', { style: { display: 'inline-flex', padding: '14px 0', fontSize: 15, fontWeight: 500, letterSpacing: '.22em', animation: 'marq 38s linear infinite' } }, run, run);
+    return {
+      marquee, catTiles: this.catTiles(), tgUrl: this.tg(), igUrl: this.props.igUrl ?? 'https://instagram.com/',
+      showReviews: this.props.showReviews ?? true,
+      newItems: all.filter(i => i.isNew), filtered, empty: filtered.length === 0, reviews: this.reviews,
+      cats: ['Все', 'Худи', 'Футболки', 'Штаны', 'Верхняя одежда', 'Аксессуары'].map(c => this.chip(c, c === cat, () => this.setState({ cat: c }))),
+      genders: ['Все', 'Мужское', 'Женское'].map(g => this.chip(g, g === gender, () => this.setState({ gender: g }))),
+      hasOpen: !!open, open: open || { sizes: [] },
+      close: () => this.setState({ openId: null }), stop: e => e.stopPropagation(),
+      sent, notSent: !sent, submit: e => { e.preventDefault(); this.setState({ sent: true }); },
+    };
+  }
+}
+</script>
+</body>
+</html>
